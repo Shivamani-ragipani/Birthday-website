@@ -29,7 +29,7 @@ export const loader = {
 /** Act zero — the mysterious knock on the door. */
 export const prelude = {
   whisper: "Hello 561, Ready ah?? Chusthava?",
-  title: "For you",
+  title: "Happy Birthday Nandhu",
   sub: "Navvaku.. chaalu",
   cta: "Tap to open",
 };
