@@ -7,13 +7,14 @@ import { Eyebrow, Reveal, Section } from "./primitives";
 const SMOKE = [0, 1, 2, 3];
 const DRIPS = [14, 38, 62, 86];
 
-export function CakeSection() {
+export function CakeSection({ onCandleBlown }: { onCandleBlown?: () => void }) {
   const [blown, setBlown] = useState(false);
 
   const blow = () => {
     if (blown) return;
     setBlown(true);
     void celebrate("finale");
+    onCandleBlown?.();
   };
 
   return (

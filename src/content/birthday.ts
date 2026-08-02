@@ -11,8 +11,8 @@ import photo5 from "@/assets/Photo-5.jpeg";
  */
 
 export const person = {
-  name: "Aria",
-  initial: "A",
+  name: "Nandhu",
+  initial: "N",
   age: 23,
 };
 
@@ -28,9 +28,9 @@ export const loader = {
 
 /** Act zero — the mysterious knock on the door. */
 export const prelude = {
-  whisper: "Someone spent a lot of time making this",
+  whisper: "Hello 561, Ready ah?? Chusthava?",
   title: "For you",
-  sub: "Only one person will ever see this page.",
+  sub: "Navvaku.. chaalu",
   cta: "Tap to open",
 };
 
@@ -46,13 +46,13 @@ export const prelude = {
 // };
 
 export const opener = {
-  eyebrow: "Just one question",
+  eyebrow: "aagu.. first thing",
   title: "Nen Baguntana??",
   sub: "There is only one correct answer.",
   yes: "Avunu",
   no: "Chiiii",
   taunts: ["nope", "wrong way", "not today", "try harder", "nice try", "give up", "told you"],
-  reward: "Knew it. Let\u2019s begin.",
+  reward: "Telsu Naaku.., Let\u2019s begin.",
 };
 
 /** Act three — the callback question. */
@@ -70,9 +70,9 @@ export const question = {
   eyebrow: "Chapter three",
   title: "Bagundha website? Nijam chepuu?",
   sub: "Answer honestly. One of these buttons is honest too.",
-  yes: "YES",
-  no: "NO",
-  taunts: ["nope", "try again", "not there", "close\u2026", "seriously?", "impressive", "okay stop"],
+  yes: "Bagundii",
+  no: "Avg vundi",
+  taunts: ["oyee", "try again", "not there", "close\u2026", "seriously?", "impressive", "okay stop"],
   reward: "Correct answer. Obviously.",
 };
 
@@ -84,7 +84,7 @@ export const photos = [photo1, photo2, photo3, photo4, photo5];
 
 export const photoIntro = {
   eyebrow: "Chapter two",
-  title: "Memories",
+  title: "Photos Bagunnai..",
 };
 
 /** Emotional timeline — no dates, only feelings. */
@@ -119,14 +119,13 @@ export const cake = {
 
 export const letter = {
   eyebrow: "Chapter five",
-  title: "For you",
+  title: "Haappy Birthday",
   lines: [
-    "Happy birthday.",
-    "I wanted to give you something that couldn\u2019t be bought or wrapped \u2014 so I built you a small world instead.",
-    "Thank you for the way you show up: unhurried, funny, impossibly kind.",
-    "May this year be soft where you need rest and loud where you need celebrating.",
+    "I wanted to give you something that couldn\u2019t be bought or wrapped \u2014 so I built this website for you. ✨",
+    "Thank you.. naa venakala roll number vunnadhuku, exams lo naa venakala vunnadhuku.. and for being the most amazing friend I could ever ask for. 🥰",
+    "May this year bring you countless smiles, beautiful memories, and everything you've been wishing for. ❤️",
   ],
-  signature: "\u2014 with love, always",
+  signature: "\u2014 Maniii",
 };
 
 export const finale = {
