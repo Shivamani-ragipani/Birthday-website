@@ -1,0 +1,289 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * All colors MUST use oklch format.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ── Birthday experience: "Blush Atelier" ──────────────────────────────
+   Soft feminine luxury: cream paper, blush + dusty rose, whisper lavender,
+   champagne / rose-gold metallics. Light, warm, calm, premium.
+   ──────────────────────────────────────────────────────────────────── */
+
+:root {
+  --radius: 1.5rem;
+
+  --background: oklch(0.982 0.011 45);
+  --foreground: oklch(0.32 0.035 350);
+  --card: oklch(0.995 0.006 60);
+  --card-foreground: oklch(0.32 0.035 350);
+  --popover: oklch(0.995 0.006 60);
+  --popover-foreground: oklch(0.32 0.035 350);
+  --primary: oklch(0.7 0.115 12);
+  --primary-foreground: oklch(0.995 0.005 60);
+  --secondary: oklch(0.955 0.02 25);
+  --secondary-foreground: oklch(0.36 0.035 350);
+  --muted: oklch(0.955 0.018 30);
+  --muted-foreground: oklch(0.55 0.035 348);
+  --accent: oklch(0.83 0.075 78);
+  --accent-foreground: oklch(0.32 0.035 350);
+  --destructive: oklch(0.62 0.19 22);
+  --destructive-foreground: oklch(0.99 0.005 60);
+  --border: oklch(0.62 0.05 350 / 14%);
+  --input: oklch(0.62 0.05 350 / 18%);
+  --ring: oklch(0.74 0.1 14);
+
+  /* palette */
+  --gold: oklch(0.79 0.085 74);
+  --gold-soft: oklch(0.9 0.055 82);
+  --rose: oklch(0.72 0.115 14);
+  --rose-deep: oklch(0.6 0.13 8);
+  --blush: oklch(0.9 0.05 20);
+  --dusty: oklch(0.82 0.055 8);
+  --lavender: oklch(0.83 0.06 300);
+  --peach: oklch(0.9 0.06 55);
+  --cream: oklch(0.985 0.012 50);
+  --plum: oklch(0.34 0.04 348);
+
+  /* surfaces */
+  --glass: oklch(1 0 0 / 55%);
+  --glass-strong: oklch(1 0 0 / 74%);
+  --hairline: oklch(1 0 0 / 70%);
+  --edge: oklch(0.6 0.05 350 / 12%);
+
+  --shadow-soft: 0 2px 10px -4px oklch(0.5 0.08 350 / 0.14);
+  --shadow-lift: 0 26px 60px -28px oklch(0.5 0.09 350 / 0.35);
+  --shadow-glow: 0 0 60px -14px oklch(0.75 0.12 18 / 0.45);
+  --shadow-gold: 0 0 44px -10px oklch(0.82 0.1 76 / 0.6);
+}
+
+@theme inline {
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-blush: var(--blush);
+  --color-dusty: var(--dusty);
+  --color-lavender: var(--lavender);
+  --color-peach: var(--peach);
+  --color-cream: var(--cream);
+  --color-plum: var(--plum);
+  --color-hairline: var(--hairline);
+  --color-edge: var(--edge);
+
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-ui: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat", ui-serif, cursive;
+}
+
+@layer base {
+  * {
+    border-color: var(--edge);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--cream);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--blush);
+    color: var(--plum);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility glass {
+  background: var(--glass);
+  border: 1px solid var(--hairline);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: var(--shadow-lift);
+}
+
+@utility glass-strong {
+  background: var(--glass-strong);
+  border: 1px solid var(--hairline);
+  backdrop-filter: blur(28px) saturate(150%);
+  box-shadow: var(--shadow-lift);
+}
+
+@utility text-gradient-gold {
+  background: linear-gradient(
+    100deg,
+    var(--rose) 0%,
+    var(--gold) 28%,
+    oklch(0.95 0.04 82) 46%,
+    var(--gold) 64%,
+    var(--rose) 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 7s linear infinite;
+}
+
+@utility text-gradient-rose {
+  background: linear-gradient(105deg, var(--rose-deep), var(--rose) 40%, var(--lavender) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility grain {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -250% 0;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(6%, -8%, 0) scale(1.12);
+  }
+  66% {
+    transform: translate3d(-7%, 5%, 0) scale(0.95);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scaleY(1) translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleY(1.14) translateX(-0.6px);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scaleY(0.9) translateX(0.7px);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(1.08) translateX(0.3px);
+    opacity: 0.95;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
