@@ -36,12 +36,32 @@ function Index() {
   const [ready, setReady] = useState(false);
   const [opened, setOpened] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
+  const [chapterThreeAnswered, setChapterThreeAnswered] = useState(false);
+  const [chapterFourReady, setChapterFourReady] = useState(false);
+  const [chapterFourCompleted, setChapterFourCompleted] = useState(false);
 
   const unlock = () => {
     setUnlocked(true);
     window.setTimeout(() => {
       document.getElementById("photos")?.scrollIntoView({ behavior: "smooth" });
     }, 1400);
+  };
+
+  const scrollToSection = (id: string) => {
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 1000);
+  };
+
+  const handleChapterThreeAnswer = () => {
+    setChapterThreeAnswered(true);
+    setChapterFourReady(true);
+    scrollToSection("cake");
+  };
+
+  const handleCandleBlown = () => {
+    setChapterFourCompleted(true);
+    scrollToSection("letter");
   };
 
   return (
@@ -69,11 +89,23 @@ function Index() {
             >
               <PhotoReveal />
               {/* <Timeline /> */}
-              <QuestionSection id="question" copy={question} />
+              <QuestionSection
+                id="question"
+                copy={question}
+                onYes={handleChapterThreeAnswer}
+              />
               {/* <StarGame /> */}
-              <CakeSection />
-              <LetterSection />
-              <Finale />
+              {chapterThreeAnswered && (
+                <>
+                  {chapterFourReady && <CakeSection onCandleBlown={handleCandleBlown} />}
+                  {chapterFourCompleted && (
+                    <>
+                      <LetterSection />
+                      <Finale />
+                    </>
+                  )}
+                </>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
