@@ -84,7 +84,7 @@ export const photos = [photo1, photo2, photo3, photo4, photo5];
 
 export const photoIntro = {
   eyebrow: "Chapter two",
-  title: "Photos Bagunnai..",
+  title: "Photos Bagunnai.. ✨",
 };
 
 /** Emotional timeline — no dates, only feelings. */
@@ -122,7 +122,7 @@ export const letter = {
   title: "Haappy Birthday",
   lines: [
     "I wanted to give you something that couldn\u2019t be bought or wrapped \u2014 so I built this website for you. ✨",
-    "Thank you.. naa venakala roll number vunnadhuku, exams lo naa venakala vunnadhuku.. and for being the most amazing friend I could ever ask for. 🥰",
+    "Thank you.. naa venakala roll number vunnadhuku, exams lo naa venakala vunnadhuku.. and for being the most amazing person I could ever ask for. 🥰",
     "May this year bring you countless smiles, beautiful memories, and everything you've been wishing for. ❤️",
   ],
   signature: "\u2014 Maniii",
