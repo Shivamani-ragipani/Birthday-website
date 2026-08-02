@@ -1,66 +1,80 @@
-# A Birthday, In Five Acts
+# Birthday Website
 
-A private, mobile-first birthday experience. Fully static — no backend, no database, no accounts. Designed at 390px for phones.
+A polished, interactive birthday experience built as a mobile-first web app. It combines cinematic animations, and small playful interactions to create a personal surprise for one person.
 
-## The acts
+## What this project is
 
-1. The opener — "Do you think I'm handsome?" (the NO button refuses to be caught). YES unlocks the rest.
-2. Memories — five full-bleed photos with parallax and blur-to-focus. No captions, just images.
-3. Are you enjoying this surprise? — the escaping button, one more time.
-4. Chapter three — the cake: tap the candle, blow it out, make a wish.
-5. Chapter four — the letter, revealed line by line, then the Happy Birthday finale with fireflies and confetti.
+This project is a single-page experience designed to feel like a digital birthday gift. It includes:
 
-## Making it personal
+- an animated opening sequence
+- interactive question prompts
+- a photo memory section
+- a candle-and-wish moment
+- a heartfelt letter and finale scene
 
-Everything writeable lives in **`src/content/birthday.ts`**: the name, the two questions, the letter, and the closing quote.
+The app is fully front-end based, with no backend or database required.
 
-### Photos
+## Tech stack
 
-Replace these five files, keeping the filenames:
+This project is built with modern web technologies:
 
-```
-src/assets/photo1.jpg
-src/assets/photo2.jpg
-src/assets/photo3.jpg
-src/assets/photo4.jpg
-src/assets/photo5.jpg
-```
+- React 19 for the UI
+- TypeScript for type safety
+- Vite for fast development and builds
+- TanStack Router and TanStack Start for routing and app structure
+- TanStack Query for client-side data state
+- Tailwind CSS for styling
+- Framer Motion for smooth animations
+- Radix UI and shadcn-style UI primitives for accessible components
+- canvas-confetti, lucide-react, and sonner for interactive polish
 
-Portrait images (roughly 3:4) look best.
+## Project structure
 
-### Music (optional)
+- src/components/birthday: the main animated experience sections
+- src/content/birthday.ts: the customizable text, messages, and content
+- src/assets: the images used in the experience
+- src/routes: route definitions for the app
+- public: static files such as optional music
 
-Drop an mp3 at `public/music.mp3`. The toggle in the bottom-right stays muted until tapped — it never autoplays. With no file present the button simply does nothing.
+## Getting started
 
-## Running locally
+### Prerequisites
+
+- Node.js
+- Bun
+
+### Install and run
 
 ```bash
 bun install
-bun run dev      # http://localhost:8080
-bun run build    # production build
+bun run dev
 ```
 
-## Deploying
+Then open the local URL shown in the terminal.
 
-### Vercel
-
-1. Push the repo to GitHub.
-2. Import it at [vercel.com/new](https://vercel.com/new).
-3. Framework preset: **Vite** (auto-detected). Build command `bun run build`.
-4. Deploy — Vercel serves the built output directly.
-
-### GitHub Pages
+### Build for production
 
 ```bash
 bun run build
-npx gh-pages -d .output/public
 ```
 
-Then in **Settings → Pages**, set the source to the `gh-pages` branch. If the site lives under a repo subpath (`user.github.io/repo`), set `base: "/repo/"` in `vite.config.ts` before building.
+## Customization
+
+You can personalize the experience by editing the content in [src/content/birthday.ts](src/content/birthday.ts), including:
+
+- the recipient name
+- the opening questions
+- the letter message
+- the closing quote
+
+You can also replace the image assets in [src/assets](src/assets) and add optional background music in [public](public).
+
+## Deployment
+
+The app can be deployed to platforms such as Vercel or any static hosting service that supports Vite-based projects.
 
 ## Notes
 
-- Dark by default; all colors are tokens in `src/styles.css`.
-- Fonts: Outfit (display), Plus Jakarta Sans (body), Caveat (handwriting).
-- Motion respects `prefers-reduced-motion`; images lazy-load; animations run on transform/opacity only.
-- The page is marked `noindex` — it is meant for one person.
+- The experience is designed primarily for mobile screens.
+- It uses a dark, cinematic visual style.
+- Motion and accessibility considerations are included throughout the experience.

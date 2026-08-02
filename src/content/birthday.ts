@@ -47,7 +47,7 @@ export const prelude = {
 
 export const opener = {
   eyebrow: "aagu.. first thing",
-  title: "Nen Baguntana??",
+  title: "Nen Baguntana?? 😅",
   sub: "There is only one correct answer.",
   yes: "Avunu",
   no: "Chiiii",
