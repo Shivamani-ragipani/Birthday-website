@@ -159,16 +159,17 @@
 @utility glass {
   background: var(--glass);
   border: 1px solid var(--hairline);
-  backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(135%);
   box-shadow: var(--shadow-lift);
 }
 
 @utility glass-strong {
   background: var(--glass-strong);
   border: 1px solid var(--hairline);
-  backdrop-filter: blur(28px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(140%);
   box-shadow: var(--shadow-lift);
 }
+
 
 @utility text-gradient-gold {
   background: linear-gradient(
@@ -254,6 +255,41 @@
     transform: scale(1.15);
   }
 }
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -12vh, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(var(--sway, 18px), 22vh, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate3d(calc(var(--sway, 18px) * -0.8), 50vh, 0) rotate(190deg);
+  }
+  75% {
+    transform: translate3d(var(--sway, 18px), 80vh, 0) rotate(300deg);
+  }
+  100% {
+    transform: translate3d(calc(var(--sway, 18px) * -0.4), 114vh, 0) rotate(400deg);
+  }
+}
+
+@keyframes petal-fall-alt {
+  0% {
+    transform: translate3d(0, -12vh, 0) rotate(20deg) scale(0.9);
+  }
+  30% {
+    transform: translate3d(calc(var(--sway, 18px) * -1), 28vh, 0) rotate(-80deg) scale(1);
+  }
+  60% {
+    transform: translate3d(var(--sway, 18px), 62vh, 0) rotate(-190deg) scale(0.96);
+  }
+  100% {
+    transform: translate3d(calc(var(--sway, 18px) * -0.5), 114vh, 0) rotate(-330deg) scale(0.9);
+  }
+}
+
+
 
 @keyframes flicker {
   0%,

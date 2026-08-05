@@ -10,6 +10,8 @@ import { Loader } from "@/components/birthday/Loader";
 import { PhotoReveal } from "@/components/birthday/PhotoReveal";
 import { Prelude } from "@/components/birthday/Prelude";
 import { QuestionSection } from "@/components/birthday/QuestionSection";
+import {Blossom } from "@/components/birthday/Blossom";
+import { TapMagic } from "@/components/birthday/TapMagic";
 // import { StarGame } from "@/components/birthday/StarGame";
 // import { Timeline } from "@/components/birthday/Timeline";
 import { opener, person, question } from "@/content/birthday";
@@ -69,6 +71,8 @@ function Index() {
       <Loader onDone={() => setReady(true)} />
       {ready && <Prelude onOpen={() => setOpened(true)} />}
       <Aurora />
+      <Blossom />
+      <TapMagic />
       <ScrollProgress />
       <MusicToggle />
 

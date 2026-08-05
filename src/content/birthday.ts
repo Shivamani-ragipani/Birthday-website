@@ -21,9 +21,9 @@ export const loader = {
     "Preparing a little surprise\u2026",
     "Collecting beautiful memories\u2026",
     "Wrapping today\u2019s happiness\u2026",
-    "Almost ready\u2026",
+    "Almost Ayipoyindi\u2026",
   ],
-  hint: "Best with sound on",
+  hint: "Ela vundho chuduu",
 };
 
 /** Act zero — the mysterious knock on the door. */
@@ -48,10 +48,10 @@ export const prelude = {
 export const opener = {
   eyebrow: "aagu.. first thing",
   title: "Nen Baguntana?? 😅",
-  sub: "There is only one correct answer.",
+  sub: "Correct answer okate undi. Guess chey.",
   yes: "Avunu",
   no: "Chiiii",
-  taunts: ["nope", "wrong way", "not today", "try harder", "nice try", "give up", "told you"],
+  taunts: ["Oye..", "inka try chey", "Nope", "try harder", "nice try", "give up", "told you"],
   reward: "Telsu Naaku.., Let\u2019s begin.",
 };
 
@@ -69,7 +69,7 @@ export const opener = {
 export const question = {
   eyebrow: "Chapter three",
   title: "Bagundha website? Nijam chepuu?",
-  sub: "Answer honestly. One of these buttons is honest too.",
+  sub: "Nijam chepu.. One of these buttons is honest too.",
   yes: "Bagundii",
   no: "Avg vundi",
   taunts: ["oyee", "try again", "not there", "close\u2026", "seriously?", "impressive", "okay stop"],
@@ -113,7 +113,7 @@ export const game = {
 export const cake = {
   eyebrow: "Chapter four",
   title: "Make a wish",
-  sub: "Tap the candle and hold the thought.",
+  sub: "Candle Tap Chey..",
   wish: "Wish received. It\u2019s already on its way.",
 };
 

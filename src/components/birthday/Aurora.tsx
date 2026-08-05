@@ -20,35 +20,35 @@ export function Aurora() {
   );
 
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div
+      aria-hidden
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+      style={{ contain: "strict" }}
+    >
       <div className="absolute inset-0" style={{ background: "var(--cream)" }} />
 
       <div
-        className="absolute -left-1/3 -top-1/4 h-[70vh] w-[95vw] rounded-full opacity-70 blur-[90px]"
+        className="absolute -left-1/3 -top-1/4 h-[70vh] w-[95vw] rounded-full opacity-60 blur-[60px]"
         style={{
           background: "radial-gradient(circle at 50% 50%, var(--blush), transparent 68%)",
-          animation: "drift 30s ease-in-out infinite",
+          animation: "drift 34s ease-in-out infinite",
+          willChange: "transform",
         }}
       />
       <div
-        className="absolute -right-1/3 top-[22%] h-[62vh] w-[90vw] rounded-full opacity-55 blur-[100px]"
+        className="absolute -right-1/3 top-[24%] h-[62vh] w-[90vw] rounded-full opacity-45 blur-[64px]"
         style={{
           background: "radial-gradient(circle at 50% 50%, var(--lavender), transparent 70%)",
-          animation: "drift 38s ease-in-out infinite reverse",
+          animation: "drift 44s ease-in-out infinite reverse",
+          willChange: "transform",
         }}
       />
       <div
-        className="absolute bottom-[-10%] left-[15%] h-[50vh] w-[80vw] rounded-full opacity-50 blur-[110px]"
+        className="absolute bottom-[-10%] left-[15%] h-[50vh] w-[80vw] rounded-full opacity-45 blur-[70px]"
         style={{
           background: "radial-gradient(circle at 50% 50%, var(--peach), transparent 72%)",
-          animation: "drift 46s ease-in-out infinite",
-        }}
-      />
-      <div
-        className="absolute left-[-15%] top-[45%] h-[36vh] w-[60vw] rounded-full opacity-40 blur-[100px]"
-        style={{
-          background: "radial-gradient(circle at 50% 50%, var(--gold-soft), transparent 70%)",
-          animation: "drift 52s ease-in-out infinite reverse",
+          animation: "drift 52s ease-in-out infinite",
+          willChange: "transform",
         }}
       />
 
@@ -73,12 +73,12 @@ export function Aurora() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 38%, transparent 30%, oklch(0.86 0.045 20 / 0.5) 100%)",
+            "radial-gradient(ellipse at 50% 38%, transparent 34%, oklch(0.88 0.04 20 / 0.42) 100%)",
         }}
       />
       {/* paper grain */}
       <div
-        className="absolute inset-0 opacity-[0.35] mix-blend-multiply"
+        className="absolute inset-0 opacity-[0.18] mix-blend-multiply"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E\")",
@@ -86,4 +86,5 @@ export function Aurora() {
       />
     </div>
   );
+
 }
