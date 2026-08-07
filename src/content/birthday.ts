@@ -131,7 +131,7 @@ export const letter = {
 export const finale = {
   title: "Happy Birthday",
   quote: "\u201cAnd the whole day belonged to you.\u201d",
-  outro: "Website Bagunte Msg cheyuu..",
+  // outro: "Website Bagunte Msg cheyuu..",
   // replay: "Play it again",
 };
 
